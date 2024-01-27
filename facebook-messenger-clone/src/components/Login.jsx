@@ -11,6 +11,13 @@ const Login = () => {
     await auth.signInWithPopup(provider);
   };
 
+  const signInWithFaceBook = async () => {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    await auth.signInWithPopup(provider);
+  };
+
+  
+
   return (
     <div id='login-page'>
       <div id="login-card">
@@ -18,7 +25,7 @@ const Login = () => {
       <div className="login-button google" onClick={signInWithGoogle}>
         <GoogleOutlined /> Sign in with Google
       </div>
-      <div className="login-button facebook">
+      <div className="login-button facebook" onClick={signInWithFaceBook}>
         <FacebookOutlined /> Sign in with Facebook
       </div>
       </div>

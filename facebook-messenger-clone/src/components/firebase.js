@@ -1,6 +1,5 @@
-// src/components/firebase.js
-import firebase from 'firebase/compat/app'; // Change 'firebase/app' to 'firebase/compat/app'
-import 'firebase/compat/auth'; // Change 'firebase/auth' to 'firebase/compat/auth'
+import firebase from 'firebase/compat/app'; 
+import 'firebase/compat/auth'; 
 
 const firebaseConfig = {
  
@@ -16,4 +15,4 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const auth = app.auth();
 
-export { auth, firebase }; // Remove the 'as default' part
+export { auth, firebase }; 
